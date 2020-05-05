@@ -1,0 +1,22 @@
+.past {
+    background-color: #ff686f;
+}
+
+.present {
+    background-color: ##e0b1d0;
+}
+
+.future {
+    background-color: #b8fc9a;
+}
+td {
+    background-color: #606a8c;
+}
+
+th {
+    background-color: #42495f;
+}
+
+.table-dark {
+    background-color: #606a8c;
+}

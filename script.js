@@ -1,5 +1,5 @@
 var saveButton = $(".save-button");
-var currentHour = moment().format("HH"); 
+
 
 //This changes the rows color
 
@@ -13,17 +13,13 @@ $(".row7").attr("data-time", moment("2:00 pm", "h:mm a").format("HH"));
 $(".row8").attr("data-time", moment("3:00 pm", "h:mm a").format("HH"));
 $(".row9").attr("data-time", moment("4:00 pm", "h:mm a").format("HH"));
 $(".row10").attr("data-time", moment("5:00 pm", "h:mm a").format("HH"));
-$(".row11").attr("data-time", moment("5:00 pm", "h:mm a").format("HH"));
+$(".row11").attr("data-time", moment("6:00 pm", "h:mm a").format("HH"));
 
-//A loop to change the colors
-
-for (var i= 0; i <= 12; i++){
-    
-}
 
 
 //jQuery
 $(document).ready(function() {
+
     $(".current-date").append();
 
     function currentDay(){
@@ -32,7 +28,44 @@ $(document).ready(function() {
 
     console.log(currentDay);
 
+    //function and variables to change color
+   
+    var currentHour = parseInt(moment().format('H'));
+    var chooseHour = parseInt($('#hour').text());
+    
+    console.log(currentHour);
+    console.log(chooseHour);
+
+    if (chooseHour === currentHour){
+        $(".form-control").addClass('present');
+    } else if (chooseHour < currentHour){
+        $(".form-control").addClass('past');
+    } else {
+        $(".form-control").addClass('future');
+    }
+
+
+    //Variables to create the local storage/
+  
+    saveButton.on("click", function(){
+        var hr = $(this).attr("data-index");
+        var task = $("#task").val();
+        localStorage.setItem(hr, task);
+
+    })
+    
+
+
 })
+
+
+
+
+
+
+
+
+
 
 //This is to chance the row colors based on time
 
