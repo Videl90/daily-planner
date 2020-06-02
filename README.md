@@ -1,5 +1,7 @@
 # 05 Third-Party APIs: Work Day Scheduler
 
+https://videl90.github.io/daily-planner/
+
 1. Created my HTML layout. 
 2. Used bootstrap elements to build it and make it responsive
 3. Changed some classes.
